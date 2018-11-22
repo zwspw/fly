@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/ushio/Desktop/77/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>不忘初心，方得始终。</title>
+	
+    <meta property="wb:webmaster" content="9471e8063cf6949a">
+
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+    <style type="text/css">
+			a:link,a:visited{text-decoration:none;}
+		</style>
+	<link href="./index_files/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./index_files/jquery.js"></script>
+	<!-- <script type="text/javascript" src="./index_files/garden.js"></script> -->
+    <script type="text/javascript" src="./index_files/functions.js"></script>
+	<!-- <script type="text/javascript" src="./index_files/console.js"></script> -->
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 11px; margin-left: 403.5px;">
+			<h1>个人简历</h1>
+			<div id="code">
+				<span class="comments">/**这是一份关于个人的简历**/</span><br>
+				<h3>基本信息</h3>
+				<span>
+					<span class="string">##  姓名:</span><span class="keyword">刘政委</span><br><br>	
+					<span class="string">##  地址:</span><span class="keyword">北京市</span><br><br>
+					<span class="string">##  电话:</span><span class="keyword">19920184440</span><br> <br>
+					<span class="string">##  邮箱:</span><span class="keyword">19920184440@163.com</span>
+				</span>
+				<h3>技术栈</h3>
+				<span>
+					<span class="comments">熟练高效编写HTML、CSS及JS代码</span><br><br>
+					<span class="comments">熟练JavaScript、jquery语言</span><br> <br>
+					<span class="comments">熟练vue.js框架</span><br><br>
+					<span class="comments">熟练使用vue全家桶('vue-cli+vue-router+axios+vuex')进行项目开发</span><br><br>
+					<span class="comments">熟悉webpack打包配置及nodejs模块</span><br><br>				
+				</span>
+
+			</div>
+			<div id="loveHeart">
+			  <canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 206px; left: 913.5px;">
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2011, 06, 23);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "❤  您的浏览器不支持HTML5技术<br/>推荐使用 Chrome/Firefox/Opera 浏览器 喵~ ＞▽＜ "; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>
